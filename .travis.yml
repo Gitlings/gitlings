@@ -1,0 +1,21 @@
+language: ruby
+rvm:
+- 2.2
+before_script:
+- chmod +x ./script/after_success
+script:
+- bundle exec jekyll build --config _config.yml,_config_gh_pages.yml
+after_success: "./script/after_success"
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - GITHUB_REPO: github.com/Gitlings/gitlings
+  - REPO_TARGET_BRANCH: gh-pages
+sudo: false
+notifications:
+  webhooks:
+    urls:
+      - https://webhooks.gitter.im/e/ee4a6f2bdbf6b08b22a9
+    on_success: change  # options: [always|never|change] default: always
+    on_failure: always  # options: [always|never|change] default: always
+    on_start: never     # options: [always|never|change] default: always
