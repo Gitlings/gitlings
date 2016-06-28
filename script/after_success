@@ -10,8 +10,13 @@ echo $(basename ${GITHUB_REPO%.git})
 cd $(basename ${GITHUB_REPO%.git})
 git config user.name "Travis CI"
 git config user.email ${EMAIL}
+echo 1
 rsync -az --delete --exclude '.git*' ../_site/ .
 touch .nojekyll
+echo 1
 git add -A .
 git commit -m "Pull request: ${TRAVIS_PULL_REQUEST}. Generated Jekyll site by Travis CI - ${TRAVIS_BUILD_NUMBER}"
+echo 1
 git push --force "https://${GITHUB_TOKEN}@${GITHUB_REPO}" HEAD:${REPO_TARGET_BRANCH} | -e "s/\(To https://\).*\(@\)/\1[you won't see this :p]\2/"
+
+echo 1
