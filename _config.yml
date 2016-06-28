@@ -5,7 +5,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
 
-exclude: [script]
+exclude: [script, vendor, Gemfile, Gemfile.lock]
 
 # Site settings
 title: Gitlings
