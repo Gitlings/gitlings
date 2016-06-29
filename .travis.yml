@@ -2,7 +2,6 @@ language: ruby
 rvm:
 - 2.2
 script:
-- if [ $TRAVIS_PULL_REQUEST = 'true' ]; then git checkout $TRAVIS_BRANCH; fi
 - bundle exec jekyll build --config _config.yml,_config_gh_pages.yml
 after_success:
 - echo $TRAVIS_PULL_REQUEST
