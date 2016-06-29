@@ -4,8 +4,10 @@ rvm:
 before_script:
 - chmod +x ./script/after_success
 script:
+- [ $TRAVIS_PULL_REQUEST = 'true'] && git checkout $TRAVIS_BRANCH
 - bundle exec jekyll build --config _config.yml,_config_gh_pages.yml
-after_success: "./script/test"
+after_success:
+- [ $TRAVIS_PULL_REQUEST = 'false'] && [ $TRAVIS_BRANCH = 'jekyll' ] && source scripts/deploy
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true

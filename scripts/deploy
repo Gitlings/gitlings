@@ -1,13 +1,11 @@
 #!/usr/bin/env bash
 set -e
 
-if [[ $TRAVIS_BRANCH != 'jekyll' ]]; then
-    exit 0
-fi
-
 git clone https://$GITHUB_REPO
+
 echo $(basename ${GITHUB_REPO%.git})
 cd $(basename ${GITHUB_REPO%.git})
+
 git config user.name "Travis CI"
 git config user.email ${EMAIL}
 rsync -az --delete --exclude '.git*' ../_site/ .
