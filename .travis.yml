@@ -2,17 +2,18 @@ language: ruby
 rvm:
 - 2.2
 script:
-- [ $TRAVIS_PULL_REQUEST = 'true' ] && git checkout $TRAVIS_BRANCH
+- if [ $TRAVIS_PULL_REQUEST = 'true' ]; then git checkout $TRAVIS_BRANCH; fi
 - bundle exec jekyll build --config _config.yml,_config_gh_pages.yml
 after_success:
-- [ $TRAVIS_PULL_REQUEST = 'true' ] && [ $TRAVIS_BRANCH = 'jekyll' ] \
-  && chmod +x ./script/deploy \
-  && source scripts/deploy
+- if [ $TRAVIS_PULL_REQUEST = 'true' ] && [ $TRAVIS_BRANCH = 'jekyll' ]; then
+- chmod +x ./script/deploy
+- source scripts/deploy
+- fi
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-  - GITHUB_REPO: github.com/Gitlings/gitlings
-  - REPO_TARGET_BRANCH: master
+  - GITHUB_REPO=github.com/Gitlings/gitlings
+  - REPO_TARGET_BRANCH=master
 sudo: false
 notifications:
   webhooks:
