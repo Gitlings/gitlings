@@ -14,7 +14,7 @@ after_success:
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-  - GITHUB_REPO=github.com/Gitlings/gitlings
+  - GITHUB_REPO=github.com/Gitlings/gitlings.github.io.git
   - REPO_TARGET_BRANCH=master
 sudo: false
 notifications:
