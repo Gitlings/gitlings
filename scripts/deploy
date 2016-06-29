@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-set -e
 
 git clone https://$GITHUB_REPO
 
