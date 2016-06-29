@@ -5,9 +5,9 @@ script:
 - if [ $TRAVIS_PULL_REQUEST = 'true' ]; then git checkout $TRAVIS_BRANCH; fi
 - bundle exec jekyll build --config _config.yml,_config_gh_pages.yml
 after_success:
-- if [ $TRAVIS_PULL_REQUEST = 'true' ] && [ $TRAVIS_BRANCH = 'jekyll' ]; then
-  chmod +x ./scripts/deploy
-  source scripts/deploy
+- if [ $TRAVIS_PULL_REQUEST = 'true' ] && [ $TRAVIS_BRANCH = 'jekyll' ]; then \
+  chmod +x ./scripts/deploy; \
+  source scripts/deploy; \
   fi
 env:
   global:
