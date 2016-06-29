@@ -8,7 +8,7 @@ after_success:
 - if [ $TRAVIS_PULL_REQUEST = 'true' ] && [ $TRAVIS_BRANCH = 'jekyll' ]; then
   chmod +x ./scripts/deploy
   source scripts/deploy
-  fi
+  fi;
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
