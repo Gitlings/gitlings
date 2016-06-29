@@ -2,16 +2,11 @@
 
 git clone https://$GITHUB_REPO
 
-FOLDER=$(basename ${GITHUB_REPO%.git})
-echo "$FOLDER"
-ls
-cd "$FOLDER"
-ls
-
+cd $(basename ${GITHUB_REPO%.git})
 git config user.name "Travis CI"
 git config user.email ${EMAIL}
 rsync -az --delete --exclude '.git*' ../_site/ .
 touch .nojekyll
 git add -A .
 git commit -m "Pull request: ${TRAVIS_PULL_REQUEST}. Generated Jekyll site by Travis CI - ${TRAVIS_BUILD_NUMBER}"
-git push --force "https://${GITHUB_TOKEN}@${GITHUB_REPO}" HEAD:${REPO_TARGET_BRANCH} | -e "s/\(To https://\).*\(@\)/\1[you won't see this :p]\2/"
+git push "https://${GITHUB_TOKEN}@${GITHUB_REPO}" HEAD:${REPO_TARGET_BRANCH} | -e "s/\(To https://\).*\(@\)/\1[you won't see this :p]\2/"
