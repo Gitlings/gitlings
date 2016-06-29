@@ -3,9 +3,10 @@ set -e
 
 git clone https://$GITHUB_REPO
 
-echo $(basename ${GITHUB_REPO%.git})
+FOLDER=$(basename ${GITHUB_REPO%.git})
+echo "$FOLDER"
 ls
-cd $(basename ${GITHUB_REPO%.git})
+cd "$FOLDER"
 ls
 
 git config user.name "Travis CI"
