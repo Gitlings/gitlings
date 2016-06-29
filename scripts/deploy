@@ -3,8 +3,10 @@ set -e
 
 git clone https://$GITHUB_REPO
 
+echo $(basename ${GITHUB_REPO%.git})
 ls
 cd $(basename ${GITHUB_REPO%.git})
+ls
 
 git config user.name "Travis CI"
 git config user.email ${EMAIL}
