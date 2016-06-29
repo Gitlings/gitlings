@@ -7,7 +7,7 @@ script:
 after_success:
 - echo $TRAVIS_PULL_REQUEST
 - echo $TRAVIS_BRANCH
-- if [ $TRAVIS_PULL_REQUEST = 'true' ] && [ $TRAVIS_BRANCH = 'jekyll' ]; then
+- if [ $TRAVIS_PULL_REQUEST != 'false' ] && [ $TRAVIS_BRANCH = 'jekyll' ]; then
   chmod +x ./scripts/deploy;
   source scripts/deploy;
   fi;
