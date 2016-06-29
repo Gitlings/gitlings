@@ -2,10 +2,10 @@ language: ruby
 rvm:
 - 2.2
 script:
-- [ $TRAVIS_PULL_REQUEST = 'true'] && git checkout $TRAVIS_BRANCH
+- [ $TRAVIS_PULL_REQUEST = 'true' ] && git checkout $TRAVIS_BRANCH
 - bundle exec jekyll build --config _config.yml,_config_gh_pages.yml
 after_success:
-- [ $TRAVIS_PULL_REQUEST = 'true'] && [ $TRAVIS_BRANCH = 'jekyll' ] \
+- [ $TRAVIS_PULL_REQUEST = 'true' ] && [ $TRAVIS_BRANCH = 'jekyll' ] \
   && chmod +x ./script/deploy \
   && source scripts/deploy
 env:
