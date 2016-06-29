@@ -9,6 +9,7 @@ after_success:
   chmod +x ./scripts/deploy
   source scripts/deploy
   fi;
+- echo "Finish"
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
