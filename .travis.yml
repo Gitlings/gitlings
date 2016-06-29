@@ -4,8 +4,8 @@ rvm:
 script:
 - bundle exec jekyll build --config _config.yml,_config_gh_pages.yml
 after_success:
-- echo "Pull request number: ${TRAVIS_PULL_REQUEST}"
-- echo "Target branch name: ${TRAVIS_BRANCH}"
+- echo "${TRAVIS_PULL_REQUEST}"
+- echo "${TRAVIS_BRANCH}"
 - if [ $TRAVIS_PULL_REQUEST = 'false' ] && [ $TRAVIS_BRANCH = 'jekyll' ]; then
   chmod +x ./scripts/deploy;
   source scripts/deploy;
