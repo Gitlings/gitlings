@@ -20,3 +20,5 @@ github_username:  gitlings
 
 # Build settings
 markdown: kramdown
+
+excerpt_separator: <!--more-->
