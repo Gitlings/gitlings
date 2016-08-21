@@ -10,13 +10,13 @@ In this post I'll tell you about how to use git and github service in our workfl
 
 <!--more-->
 
-## If you're a beginner in git.
+## If you're a beginner in git
 If you have no experience in working with git, I highly recommend you to complete the following tutorials:
 
 * [try.github.io][try-github]
 * [learngitbranching.js.org][git-branching]
 
-The first one will teach you git basics and the second one will help you to learn how to work with branches. These is really fundamental knowledge, without it you will unlikely be able to work on our projects.
+The first one will teach you git basics and the second one will help you to learn how to work with branches. This is really fundamental knowledge, without it you will unlikely be able to work on our projects.
 
 ## Working with git locally
 So you've cloned a repository, and you're going to do something very useful for your project, to change some files, yeah... So here comes
