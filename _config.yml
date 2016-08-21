@@ -10,13 +10,13 @@ exclude: [script, vendor, Gemfile, Gemfile.lock]
 # Site settings
 title: Gitlings
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  "Gitlings" is a russian and english speaking group of people who learn programming and share knowledge to each other and public.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://127.0.0.1:4000/" # the base hostname & protocol for your site
-twitter_username: jekyllrb
+#twitter_username: jekyllrb
 github_username:  gitlings
 
 # Build settings
 markdown: kramdown
+
+excerpt_separator: <!--more-->

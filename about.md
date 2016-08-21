@@ -4,12 +4,9 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+"Gitlings" is a russian and english speaking group of people who learn programming and share knowledge to each other and public.
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
+For now we are focused on forming our workflow, learning Rust and OpenGL.
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+Our orginazation on github: [Gitlings](https://github.com/Gitlings)\\
+Our chat: [![Gitter](https://badges.gitter.im/Gitlings/general.svg)](https://gitter.im/Gitlings/general?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
