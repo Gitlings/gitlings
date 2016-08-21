@@ -6,7 +6,7 @@ author: mvlabat
 categories: [mainpage, workflow]
 ---
 
-Hi everyone! In this post I'll tell you about to write posts for our site. :)
+Hi everyone! In this post I'll tell you about writing posts for our site. :)
 
 {: .center }
 ![image](jekyll-logo.png "Jekyll logo")
@@ -68,11 +68,12 @@ categories: [mainpage, workflow]    <!-- Array of the categories (projects) the 
 
 Insert it inside your file and make sure to remove the comments and fill the fields with your data.
 
-Then you can write about everything you're up to. :) Make sure to check markdown/kramdown/jekyll guides, you're welcome to suggest everything we can add in this post or make a github contribution (post about it is coming soon) by yourself.
+Then you can write about everything you're up to. :) Make sure to check markdown/kramdown/jekyll guides, you're welcome to suggest everything we can add in this post or make a [github contribution][git-workflow] by yourself.
 
 Cheers!
 
 [installing-git]: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 [installing-ruby]: https://www.ruby-lang.org/en/documentation/installation
 [installing-jekyll]: https://jekyllrb.com/docs/windows/
+[git-workflow]: /posts/workflow/git-workflow
 
